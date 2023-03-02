@@ -24,7 +24,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-         server: ftp.baazrr.com
-         username: testgitaction@test.baazrr.com
-         password: !jA$_aV9kkGI
-         server-dir: /test.baazrr.com/testgitaction/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /test.baazrr.com/testgitaction/
